@@ -40,7 +40,7 @@ jobs:
       - run:
           name: connection
           command: |
-            docker tag niels3 "Kent1-DR/node-js-sample" && docker push "Kent1-DR/node-js-sample"
+            docker tag niels3 "Kent1-DR/niels3" && docker push "Kent1-DR/niels3"
 
 
 # Orchestrate our job run sequence
