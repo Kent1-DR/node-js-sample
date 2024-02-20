@@ -21,13 +21,13 @@ jobs:
       - run:
           name: Build Docker image
           command: |
-            docker build -t niels2 .
+            docker build -t niels3 .
 
       # Étapes pour exécuter les tests
       - run:
           name: Run tests and curl
           command: |
-            docker run -d -p 8080:8080 niels2
+            docker run -d -p 8080:8080 niels3
             sleep 10
             curl http://127.0.0.1:8080
 
@@ -40,7 +40,7 @@ jobs:
       - run:
           name: connection
           command: |
-            docker tag niels2 "Kent1-DR/node-js-sample" && docker push "Kent1-DR/node-js-sample"
+            docker tag niels3 "Kent1-DR/node-js-sample" && docker push "Kent1-DR/node-js-sample"
 
 
 # Orchestrate our job run sequence
