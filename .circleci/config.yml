@@ -30,6 +30,18 @@ jobs:
             docker run -p 8080:8080 niels2
             curl http://127.0.0.1:8080
 
+
+      - run:
+          name: connection
+          command: |
+            echo "$DOCKERPASS" | docker login -u king12quentin --password-stdin
+
+      - run:
+          name: connection
+          command: |
+            docker tag niels2 "Kent1-DR/node-js-sample" && docker push "Kent1-DR/node-js-sample"
+
+
 # Orchestrate our job run sequence
 workflows:
   build:
